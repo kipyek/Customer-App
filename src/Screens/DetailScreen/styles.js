@@ -18,6 +18,11 @@ export default StyleSheet.create({
     fontWeight: "600",
     marginVertical: 10,
   },
+  menuTitle: {
+    fontSize: 16,
+    letterSpacing: 0.7,
+    marginTop: 20
+  },
   subtitle: {
     fontSize: 15,
     color: 'gray'

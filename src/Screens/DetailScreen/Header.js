@@ -9,7 +9,7 @@ import DishListItem from '../../Components/DishListItem';
 const restaurant = restaurants[0];
 ("");
 
-const Detail = () => {
+const Header = () => {
   return (
     <View style={styles.page}>
       <Image source={{ uri: restaurant.image }} style={styles.image} />
@@ -19,9 +19,11 @@ const Detail = () => {
         <Text style={styles.subtitle}>
           ${restaurant.deliveryFee} ​&#8226; {restaurant.minDeliveryTime} -
           {restaurant.maxDeliveryTime} mins</Text>
+
+        <Text style={styles.menuTitle}>Menu</Text>
       </View>
     </View>
   )
 }
 
-export default Detail;
+export default Header;

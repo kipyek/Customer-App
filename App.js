@@ -3,13 +3,16 @@ import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './src/Screens/HomeScreen';
 import DishDetailScreen from './src/Screens/DishDetailScreen';
 import Basket from './src/Screens/Basket';
+import OrderScreen from './src/Screens/OrderScreen';
+import OrderDetails from './src/Screens/OrderDetails';
+
 
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Basket />
+      <OrderDetails />
       <StatusBar style='auto' />
     </View>
   );

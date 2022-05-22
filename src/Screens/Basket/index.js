@@ -3,19 +3,9 @@ import { StyleSheet, Text, View, FlatList } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
 
 import restraurants from '../../../assets/data/restaurants.json';
+import BasketDishItem from '../../Components/BasketDishItem';
 
 const retraurant = restraurants[0];
-const BasketDishItem = ({ basketDish }) => {
-  return (
-    <View style={styles.row}>
-      <View style={styles.quantityContainer}>
-        <Text>1</Text>
-      </View>
-      <Text style={{ fontSize: 16 }}>{basketDish.name}</Text>
-      <Text style={{ marginLeft: 'auto' }}>$ {basketDish.price}</Text>
-    </View>
-  )
-}
 
 const Basket = () => {
   return (
@@ -23,7 +13,7 @@ const Basket = () => {
       <Text style={styles.name}>{retraurant.name}</Text>
 
 
-      <Text style={{ fontWeight: '600', marginTop: 20, fontSize: 15 }}>Your items</Text>
+      <Text style={{ fontWeight: '600', marginTop: 20, fontSize: 15, marginLeft: 12 }}>Your items</Text>
 
       <FlatList
         data={retraurant.dishes}
@@ -59,10 +49,6 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     backgroundColor: 'lightgray'
   },
-  row: {
-    flexDirection: 'row',
-    marginVertical: 15
-  },
   quantity: {
     fontSize: 25,
     fontWeight: '400',
@@ -79,14 +65,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontSize: 15
   },
-  quantityContainer: {
-    paddingHorizontal: 5,
-    marginRight: 7,
-    backgroundColor: 'lightgray',
-    borderRadius: 16,
-    paddingVertical: 2
-
-  }
 })
 
 export default Basket

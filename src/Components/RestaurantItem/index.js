@@ -1,9 +1,16 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 
 
 const Restaurant1 = ({ restaurant }) => {
+  const navigation = useNavigation();
+
+  const onPress = () => {
+    console.log('first')
+    navigation.navigate("Restraurant", { id: restaurant.id });
+  }
   return (
-    <View style={styles.Rcontainer}>
+    <TouchableOpacity onPress={onPress} style={styles.Rcontainer}>
       <Image source={{
         uri: restaurant.image,
       }}
@@ -24,7 +31,7 @@ const Restaurant1 = ({ restaurant }) => {
 
       </View>
 
-    </View>
+    </TouchableOpacity>
   );
 };
 

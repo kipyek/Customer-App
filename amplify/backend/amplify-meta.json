@@ -1,0 +1,59 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-customeruser-staging-181207-authRole",
+      "UnauthRoleArn": "arn:aws:iam::712857900945:role/amplify-customeruser-staging-181207-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::712857900945:role/amplify-customeruser-staging-181207-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-customeruser-staging-181207-deployment",
+      "UnauthRoleName": "amplify-customeruser-staging-181207-unauthRole",
+      "StackName": "amplify-customeruser-staging-181207",
+      "StackId": "arn:aws:cloudformation:us-east-1:712857900945:stack/amplify-customeruser-staging-181207/8503e960-dde8-11ec-8d4f-0e5a09e3173d",
+      "AmplifyAppId": "d1ak0x37fgw1b3"
+    }
+  },
+  "auth": {
+    "CustomerUser": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 6,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "output": {
+        "UserPoolId": "us-east-1_95pHzxROZ",
+        "AppClientIDWeb": "2rf3rchci5cmbsalt2mmb5ofs6",
+        "AppClientID": "2kkhpl1sjt94160er9fnck2a8r",
+        "IdentityPoolId": "us-east-1:da65e3a1-bd36-4078-a1f3-0a03996b2ae8",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:712857900945:userpool/us-east-1_95pHzxROZ",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "CustomerUser"
+      },
+      "lastPushTimeStamp": "2022-05-27T20:52:19.747Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-customeruser-staging-181207-deployment/amplify-cfn-templates/auth/CustomerUser-cloudformation-template.json",
+        "logicalId": "authCustomerUser"
+      }
+    }
+  }
+}

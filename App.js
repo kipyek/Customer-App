@@ -4,10 +4,7 @@ import RootNavigator from './src/Screens/Navigation'
 
 import { NavigationContainer } from '@react-navigation/native';
 
-
-
-
-export default function App() {
+function App() {
   return (
     <NavigationContainer>
       <RootNavigator />
@@ -15,3 +12,5 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+export default App;

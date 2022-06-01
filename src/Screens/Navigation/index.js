@@ -6,6 +6,7 @@ import DetailScreen from '../DetailScreen';
 import Basket from '../Basket';
 import OrderScreen from '../OrderScreen';
 import OrderDetails from '../OrderDetails';
+import ProfileScreen from '../ProfileScreen';
 
 import { Feather, MaterialIcons } from '@expo/vector-icons';
 
@@ -28,7 +29,7 @@ const HomeTabs = () => {
         options={{ tabBarIcon: ({ color }) => <Feather name="home" size={24} color={color} /> }} />
       <Tab.Screen name="Orders" component={OrderStackNavigator}
         options={{ tabBarIcon: ({ color }) => <MaterialIcons name="list-alt" size={24} color={color} /> }} />
-      <Tab.Screen name="Profile" component={OrderScreen}
+      <Tab.Screen name="Profile" component={ProfileScreen}
         options={{ tabBarIcon: ({ color }) => <MaterialIcons name="person" size={24} color={color} /> }} />
     </Tab.Navigator>
   )

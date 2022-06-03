@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import RootNavigator from './src/Screens/Navigation'
 
 import { NavigationContainer } from '@react-navigation/native';
-import { Amplify } from 'aws-amplify'
+import { Amplify } from 'aws-amplify';
 import { withAuthenticator } from 'aws-amplify-react-native';
 import config from './src/aws-exports'
 
